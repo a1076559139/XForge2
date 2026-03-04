@@ -1,0 +1,23 @@
+{
+  "name": "xforge2",
+  "uuid": "ab72af5f-29c4-446f-8911-e4a0a6e3b139",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "xforge": {
+    "type": "XForge2",
+    "version": "1.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0"
+  },
+  "scripts": {
+    "cli": "npx --registry=https://registry.npmmirror.com @gamex/cc-cli@latest",
+    "package": "npm run cli package 快捷指令:管理扩展",
+    "pkg:add": "node ./extensions/pkg add",
+    "pkg:remove": "node ./extensions/pkg remove",
+    "pkg:update": "node ./extensions/pkg update"
+  }
+}

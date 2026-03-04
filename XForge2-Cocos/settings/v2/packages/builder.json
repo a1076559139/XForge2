@@ -1,0 +1,201 @@
+{
+  "__version__": "1.3.9",
+  "textureCompressConfig": {
+    "genMipmaps": false
+  },
+  "bundleConfig": {
+    "custom": {
+      "auto_f7NI9WxFVIO6e8LbJGF72k": {
+        "displayName": "框架程序集",
+        "configs": {
+          "native": {
+            "preferredOptions": {
+              "compressionType": "merge_all_json",
+              "isRemote": false
+            },
+            "overwriteSettings": {}
+          },
+          "miniGame": {
+            "configMode": "overwrite",
+            "overwriteSettings": {
+              "bytedance-mini-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "oppo-mini-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "huawei-quick-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "vivo-mini-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "xiaomi-quick-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "baidu-mini-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "wechatgame": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "alipay-mini-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "taobao-creative-app": {
+                "compressionType": "merge_all_json",
+                "isRemote": true
+              },
+              "taobao-mini-game": {
+                "compressionType": "subpackage",
+                "isRemote": false
+              },
+              "link-sure": {
+                "compressionType": "merge_dep",
+                "isRemote": false
+              },
+              "qtt": {
+                "compressionType": "merge_dep",
+                "isRemote": false
+              },
+              "cocos-play": {
+                "compressionType": "zip",
+                "isRemote": true
+              },
+              "fb-instant-games": {
+                "compressionType": "merge_all_json",
+                "isRemote": true
+              }
+            }
+          },
+          "web": {
+            "preferredOptions": {
+              "compressionType": "merge_all_json",
+              "isRemote": true
+            },
+            "overwriteSettings": {}
+          }
+        }
+      },
+      "auto_11aBEBWDxI/6ryvKvFthEo": {
+        "displayName": "框架资源集",
+        "configs": {
+          "native": {
+            "preferredOptions": {
+              "compressionType": "merge_dep",
+              "isRemote": false
+            },
+            "overwriteSettings": {}
+          },
+          "miniGame": {
+            "configMode": "overwrite",
+            "overwriteSettings": {
+              "xiaomi-quick-game": {
+                "compressionType": "subpackage"
+              },
+              "wechatgame": {
+                "compressionType": "subpackage"
+              },
+              "vivo-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "taobao-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "oppo-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "huawei-quick-game": {
+                "compressionType": "subpackage"
+              },
+              "fb-instant-games": {
+                "isRemote": true
+              },
+              "bytedance-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "alipay-mini-game": {
+                "compressionType": "subpackage"
+              }
+            },
+            "fallbackOptions": {
+              "isRemote": true
+            }
+          },
+          "web": {
+            "preferredOptions": {
+              "compressionType": "merge_dep",
+              "isRemote": true
+            },
+            "overwriteSettings": {}
+          }
+        }
+      },
+      "default": {
+        "displayName": "i18n:builder.asset_bundle.defaultConfig",
+        "configs": {
+          "native": {
+            "preferredOptions": {
+              "isRemote": false,
+              "compressionType": "merge_dep"
+            }
+          },
+          "web": {
+            "preferredOptions": {
+              "isRemote": true,
+              "compressionType": "merge_dep"
+            },
+            "fallbackOptions": {
+              "compressionType": "merge_dep"
+            }
+          },
+          "miniGame": {
+            "fallbackOptions": {
+              "isRemote": true,
+              "compressionType": "merge_dep"
+            },
+            "configMode": "overwrite",
+            "overwriteSettings": {
+              "alipay-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "bytedance-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "fb-instant-games": {
+                "compressionType": "merge_dep",
+                "isRemote": true
+              },
+              "huawei-quick-game": {
+                "compressionType": "subpackage"
+              },
+              "oppo-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "taobao-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "vivo-mini-game": {
+                "compressionType": "subpackage"
+              },
+              "wechatgame": {
+                "compressionType": "subpackage"
+              },
+              "xiaomi-quick-game": {
+                "compressionType": "subpackage"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

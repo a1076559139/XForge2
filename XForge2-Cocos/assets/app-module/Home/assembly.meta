@@ -1,0 +1,13 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "aae10a1f-a5fb-473f-bdbb-39c545308805",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "isBundle": true,
+    "bundleName": "app-module-home",
+    "bundleConfigID": "auto_f7NI9WxFVIO6e8LbJGF72k"
+  }
+}

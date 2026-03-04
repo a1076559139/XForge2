@@ -1,0 +1,84 @@
+{
+    "name": "xforge",
+    "version": "2.0.0",
+    "package_version": 2,
+    "main": "./editor/dist/main.cjs",
+    "contributions": {
+        "asset-db": {
+            "mount": {
+                "path": "./runtime",
+                "readonly": true
+            }
+        },
+        "scene": {
+            "script": "./editor/dist/scene.cjs"
+        },
+        "inspector": {
+            "section": {
+                "asset": {
+                    "directory": "./editor/dist/asset-directory.cjs"
+                }
+            }
+        },
+        "menu": [
+            {
+                "path": "XForge",
+                "label": "i18n:xforge.create",
+                "message": "open"
+            },
+            {
+                "path": "XForge",
+                "label": "i18n:xforge.wiki",
+                "message": "wiki"
+            },
+            {
+                "path": "XForge",
+                "label": "i18n:xforge.issues",
+                "message": "issues"
+            },
+            {
+                "path": "XForge",
+                "label": "i18n:xforge.store",
+                "message": "store"
+            }
+        ],
+        "messages": {
+            "open": {
+                "methods": [
+                    "open"
+                ]
+            },
+            "wiki": {
+                "methods": [
+                    "wiki"
+                ]
+            },
+            "issues": {
+                "methods": [
+                    "issues"
+                ]
+            },
+            "store": {
+                "methods": [
+                    "store"
+                ]
+            },
+            "asset-db:ready": {
+                "methods": [
+                    "asset-db:ready"
+                ]
+            }
+        }
+    },
+    "panels": {
+        "default": {
+            "main": "./editor/dist/panel.cjs",
+            "size": {
+                "min-width": 400,
+                "min-height": 300,
+                "width": 800,
+                "height": 700
+            }
+        }
+    }
+}

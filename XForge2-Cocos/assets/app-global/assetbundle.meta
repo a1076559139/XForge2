@@ -1,0 +1,14 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "2d29c11a-fb43-4e66-8d14-66767955764b",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "isBundle": true,
+    "priority": 8,
+    "bundleName": "app-global-res",
+    "bundleConfigID": "auto_11aBEBWDxI/6ryvKvFthEo"
+  }
+}
