@@ -17,4 +17,4 @@
 
 ### 快速入门
 
-请参阅开发文档，了解如何快速开始使用 `XForge2`：[快速开始](https://gitee.com/cocos2d-zp/xforge/wikis/pages?sort_id=13017445&doc_id=6236543)
+请参阅开发文档，了解如何快速开始使用 `XForge2`：[快速开始](https://gitee.com/cocos2d-zp/xforge2-cocos/wikis/pages?sort_id=16679531&doc_id=7564701)
