@@ -31,6 +31,10 @@ export class App {
         }
     }
 
+    /**
+     * 业务逻辑中**禁止**使用。
+     * - 仅在与外部环境交互时使用，比如在Web环境中与Vue进行通信。
+     */
     public readonly event = new EventBus();
 
     public lib = { task, storage, debug, logger, loader };

@@ -10,8 +10,9 @@
     -   通过阅读源码或使用 `xforge2-manual` skill 来验证 API。
 
 2.  **结构安全 (Structure Safety)**:
+    -   禁止向 `extensions/xforge/` 中添加任何文件或文件夹。
     -   禁止 AI 工具自动创建或修改 Prefab/Scene 文件。
-    -   禁止 AI 工具自动创建框架结构相关的文件或文件夹。
+    -   禁止 AI 工具自动创建 Module、Model、Service、View、Sound 等框架结构类的文件或文件夹。
     -   所有框架结构类的文件或文件夹创建都需要引导用户通过菜单去创建，可通过调用 `xforge2-manual` skill 来了解具体操作步骤。
 
 3.  **纯洁性 (Purity)**:

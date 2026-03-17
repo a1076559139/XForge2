@@ -117,13 +117,13 @@ protected start(): void {
 
 ```typescript
 // AppModuleHome.ts
-import { BaseModule, module } from '../../../extensions/xforge/runtime/base/BaseModule';
+import { BaseModule, module } from 'db://xforge/base/BaseModule';
 
 @module('Home') // 功能模块
 export class AppModuleHome extends BaseModule { ... }
 
 // AppGlobal.ts
-import { BaseModule, global } from '../../../extensions/xforge/runtime/base/BaseModule';
+import { BaseModule, global } from 'db://xforge/base/BaseModule';
 
 @global() // 全局模块
 export class AppGlobal extends BaseModule { ... }
@@ -201,12 +201,13 @@ Model 负责数据的存储、运算和校验，推荐结合 `cc-store` 实现�
 
 ```typescript
 // GameData.ts
-import { BaseModel } from '../../base/BaseModel';
+import { BaseModel } from 'db://xforge/base/BaseModel';
+import { IModelContext } from 'db://xforge/base/BaseModule';
 import { createStore } from 'db://pkg/@gamex/cc-store';
 
 export class GameData extends BaseModel {
-    constructor() {
-        super();
+    constructor(module: IModelContext) {
+        super(module);
         return createStore(this); // 启用响应式
     }
     score = 0;
@@ -235,7 +236,7 @@ Service 是模块的“大脑”，负责业务逻辑编排和跨组件通信。
 继承自 `BaseService`。
 
 ```typescript
-import { BaseService } from '../../base/BaseService';
+import { BaseService } from 'db://xforge/base/BaseService';
 export class GameService extends BaseService { ... }
 ```
 

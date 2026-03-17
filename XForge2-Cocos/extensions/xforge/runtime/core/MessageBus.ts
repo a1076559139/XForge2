@@ -137,11 +137,8 @@ export class MessageBus {
     public targetOff(target?: unknown) {
         if (!target) return;
 
-        for (const key in this.listeners) {
-            if (Object.prototype.hasOwnProperty.call(this.listeners, key)) {
-                const element = this.listeners[key];
-                element.removeByTarget(target);
-            }
-        }
+        this.listeners.forEach((callbackList) => {
+            callbackList.removeByTarget(target);
+        })
     }
 }
