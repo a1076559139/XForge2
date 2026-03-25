@@ -221,7 +221,7 @@ export class UIManager extends BaseManager {
             this._toast = instantiate(Configuration.UIToast);
             this._toast.parent = Configuration.UserInterface;
             this._toast.layer = Layers.Enum.UI_2D;
-            this._loading.setSiblingIndex(-1);
+            this._toast.setSiblingIndex(-1);
         }
         return this._toast;
     }
