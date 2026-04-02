@@ -379,7 +379,8 @@ export class UIManager extends BaseManager {
             });
         } else {
             this.module.loadAsset(assetName, Prefab, (prefab) => {
-                this.prefabCacheMap.set(assetName, prefab);
+                if (prefab)
+                    this.prefabCacheMap.set(assetName, prefab);
                 onCompleted(prefab);
             }, onProgress);
         }

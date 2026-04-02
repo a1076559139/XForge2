@@ -105,6 +105,7 @@ export class SoundManager extends BaseManager {
         }
     }
 
+    private musicToken = 0;
     private effectIntervalMap: Map<string, number> = new Map();
     private audioClipCacheMap: Map<string, AudioClip> = new Map();
 
@@ -124,6 +125,7 @@ export class SoundManager extends BaseManager {
 
         this.effectIntervalMap.clear();
         this.audioClipCacheMap.clear();
+        this.musicToken = 0;
     }
 
     //#region Music
@@ -173,10 +175,12 @@ export class SoundManager extends BaseManager {
      * @param name Global-Sound/Music或Module-Sound/Music下的音频文件路径
      */
     public playMusic(name: string, volume = 1, onCompleted?: () => void, onProgress?: (progress: number) => void): void {
+        var token = this.musicToken++;
         this.loadMusic(name, (clip) => {
-            if (!clip) {
+            if (token !== this.musicToken)
                 return;
-            }
+            if (!clip)
+                return;
 
             // 先停止
             SoundManager.musicInfo.audioSource.stop();
@@ -303,7 +307,7 @@ export class SoundManager extends BaseManager {
      * @returns 音频Id(从1开始, -1表示不能播放)
      */
     public playEffectWithGroup(group: string | null, name: string, interval: number = 0, loop = false, volume = 1): number {
-        if (SoundManager.effectInfoList.length > SoundManager.maxEffectCount) {
+        if (SoundManager.effectInfoList.length >= SoundManager.maxEffectCount) {
             return -1;
         }
 
@@ -345,6 +349,14 @@ export class SoundManager extends BaseManager {
             if (effectInfo.soundState === SoundState.Loading || effectInfo.soundState === SoundState.Playing) {
                 effectInfo.soundState = SoundState.Playing;
                 effectInfo.audioSource.play();
+
+                if (!loop) {
+                    effectInfo.audioSource.node.once(AudioSource.EventType.ENDED, () => {
+                        if (effectInfo.soundId !== soundId) return;
+                        if (effectInfo.soundState !== SoundState.Playing) return;
+                        effectInfo.soundState = SoundState.Stopped;
+                    });
+                }
             }
         });
 

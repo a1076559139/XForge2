@@ -1,4 +1,4 @@
-import { js } from 'cc';
+import { Director, director, js } from 'cc';
 import { DEBUG, DEV, EDITOR } from 'cc/env';
 import { BaseModule, getGlobalType, getModuleType } from './base/BaseModule';
 import { EventBus } from './core/EventBus';
@@ -11,6 +11,15 @@ import { AppGlobalUtility, AppModuleUtility } from './utillity/Utillity';
 
 interface Action<T = void> {
     (result: T): void;
+}
+
+if (DEBUG) {
+    director.once(Director.EVENT_AFTER_SCENE_LAUNCH, () => {
+        const sceneName = director.getScene()?.name;
+        if (sceneName !== 'Main') {
+            logger.error(`启动场景必须为 Main 场景，当前场景为 ${sceneName}，请检查场景设置`);
+        }
+    });
 }
 
 export class App {
