@@ -15,9 +15,9 @@ interface Action<T = void> {
 
 if (DEBUG && (!EDITOR || !EDITOR_NOT_IN_PREVIEW)) {
     director.once(Director.EVENT_AFTER_SCENE_LAUNCH, () => {
-        const sceneName = director.getScene()?.name;
-        if (sceneName !== 'Main') {
-            logger.error(`启动场景必须为 Main 场景，当前场景为 ${sceneName}，请检查场景设置`);
+        const scene = director.getScene();
+        if (!scene.getComponentInChildren('BaseMain')) {
+            logger.error('启动场景必须为 Main 场景，请检查场景设置');
         }
     });
 }
