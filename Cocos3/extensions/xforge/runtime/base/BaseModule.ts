@@ -171,7 +171,7 @@ export abstract class BaseModule implements IModelContext, IServiceContext {
         loader.loadDir({
             path: path,
             type: type,
-            bundle: this.moduleName,
+            bundle: this.bundleName,
             onComplete: onCompleted,
             onProgress: onProgress,
         });
